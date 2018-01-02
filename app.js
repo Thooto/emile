@@ -22,7 +22,7 @@ var app = express();
 
 
 // Starting server and socket.io module
-var server = app.listen(process.env.OPENSHIFT_NODEJS_PORT || 8080, process.env.OPENSHIFT_NODEJS_IP || '127.0.0.1', console.log('Currently listening to port 4000!'));
+var server = app.listen(process.env.OPENSHIFT_NODEJS_PORT || 8080, process.env.OPENSHIFT_NODEJS_IP || '127.0.0.1', console.log('Currently listening to port '+(process.env.OPENSHIFT_NODEJS_PORT || 8080)));
 var io = socket(server);
 
 
