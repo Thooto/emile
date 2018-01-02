@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>emile.io</title>
+        <link rel="stylesheet" href="./../../../../styles/style-play.css">
+        <link rel="icon" href="/../../../../images/logo.ico" />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.4/socket.io.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
+    </head>
+    <body>
+
+        <div id="game-end">
+            GAME OVER!<br>
+            <div id = "results"></div>
+            <div id="back">
+                <button id="back-button">BACK TO LOBBY</button>
+            </div>
+        </div>
+
+        <div id="content">
+            <div id="game-status">
+                CURRENT PLAYER <div id="current-player"></div>
+                <div id="logger"></div>
+                <div id="status-foot"></div>
+            </div>
+
+            <div id="game-three"></div>
+
+            <script src="/../../../../javascript/three.min.js"></script>
+
+            <!-- Imports for the main script -->
+
+            <!-- Objects -->
+            <script src="/../../../../objects/Renderer.js"></script>
+            <script src="/../../../../objects/Scene.js"></script>
+            <script src="/../../../../objects/Camera.js"></script>
+            <script src="/../../../../objects/Props.js"></script>
+            <script src="/../../../../objects/UI.js"></script>
+            <script src="/../../../../objects/Dice.js"></script>
+            <script src="/../../../../objects/Opponent.js"></script>
+
+            <!-- Functions -->
+            <script src="/../../../../javascript/communications.js"></script>
+            <script src="/../../../../javascript/handlers.js"></script>
+            <script src="/../../../../javascript/events.js"></script>
+
+            <!-- End of imports for the main script -->
+
+            <!-- MAIN SCRIPT -->
+            <script src="/../../../../javascript/game.js"></script>
+        </div>
+    </body>
+</html>

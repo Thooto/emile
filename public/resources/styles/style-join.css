@@ -1,0 +1,303 @@
+@font-face {
+    font-family: "gill";
+    src: url("gill.ttf") format("truetype");
+}
+
+@keyframes emile-transform {
+    0% {transform: translate(-100px); opacity: 0;}
+    100% {transform: translate(0px); opacity: 1;}
+}
+
+@keyframes description-transform {
+    0% {transform: translate(100px); opacity: 0;}
+    100% {transform: translate(0px); opacity: 1;}
+}
+
+@keyframes input-transform {
+    0% {transform: translate(-40px); opacity: 0;}
+    100% {transform: translate(0px); opacity: 1;}
+}
+
+@keyframes foot-transform {
+    0% {transform: translate(150px); opacity: 0; width: 50px;}
+    100% {transform: translate(0px); opacity: 1; width: 200px;}
+}
+
+@keyframes button-appear {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+@keyframes dices-appear {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    overflow: hidden;
+    margin: 0;
+    font-family: "gill";
+    background-color: #050505;
+}
+
+::selection {
+  background: #d1d1d1;
+}
+
+#wrapper {
+    z-index: 1;
+    position: absolute;
+    display: flex;
+    margin-left: 100px;
+    margin-top: 90px;
+    flex-direction: column;
+}
+
+#dices {
+    z-index: 0;
+    filter: blur(5px);
+    position: absolute;
+    animation: 3s ease-in-out dices-appear;
+}
+
+
+#emile {
+    font-size: 96px;
+    color: rgb(200, 200, 200);
+    letter-spacing: 16px;
+    animation: 1.2s ease-out emile-transform;
+}
+
+#message {
+    font-size: 48px;
+    color: rgb(200, 200, 200);
+    letter-spacing: 16px;
+    animation: 1.2s ease-out emile-transform;
+}
+
+#small {
+    display: inline;
+    letter-spacing: 6px;
+    color: inherit;
+    font-size: 28px;
+    animation: .4s ease-in-out button-appear;
+    animation-fill-mode: both;
+    animation-delay: 2s;
+}
+
+#description {
+    margin-left: 70px;
+    margin-top: -10px;
+    font-size: 28px;
+    color: rgb(200, 200, 200);
+    letter-spacing: 6px;
+    animation: 1.2s ease-out description-transform;
+}
+
+#name-input {
+    margin-top: 120px;
+    margin-left: 0px;
+    font-family: inherit;
+    color: rgb(200, 200, 200);
+    font-size: 28px;
+    letter-spacing: 6px;
+    font-weight: bold;
+    border: none;
+    background: none;
+    animation: .8s ease-out input-transform;
+    animation-fill-mode: both;
+    animation-delay: .6s;
+    transition: .35s ease-in-out;
+}
+
+#name-input::placeholder {
+    color: rgb(200, 200, 200);
+    font-weight: normal;
+}
+
+#name-foot {
+    margin-left: 40px;
+    border-top: solid 2px rgb(200, 200, 200);
+    animation: .8s ease-out foot-transform;
+    animation-fill-mode: both;
+    animation-delay: .6s;
+    transition: .35s ease-in-out;
+}
+
+#name-input:focus {
+    outline: none;
+    margin-left: 34px;
+}
+
+#name-input:focus + #name-foot {
+    transition: .2s;
+    margin-left: 20px;
+    margin-top: -.5px;
+    margin-bottom: -.5px;
+    border-top: solid 3px rgb(200, 200, 200);
+}
+
+#name-input:hover {
+    margin-left: 34px;
+}
+
+#name-input:hover + #name-foot {
+    margin-left: 20px;
+}
+
+#room-input {
+    margin-top: 60px;
+    margin-left: 0px;
+    font-family: inherit;
+    color: rgb(200, 200, 200);
+    font-size: 28px;
+    font-weight: bold;
+    letter-spacing: 6px;
+    border: none;
+    background: none;
+    animation: .8s ease-out input-transform;
+    animation-fill-mode: both;
+    animation-delay: 1s;
+    transition: .35s ease-in-out;
+}
+
+#room-input::placeholder {
+    color: rgb(200, 200, 200);
+    font-weight: normal;
+}
+
+#room-foot {
+    margin-left: 40px;
+    border-top: solid 2px rgb(200, 200, 200);
+    animation: .8s ease-out foot-transform;
+    animation-fill-mode: both;
+    animation-delay: 1s;
+    transition: .35s ease-in-out;
+}
+
+#room-input:focus {
+    outline: none;
+    margin-left: 45px;
+}
+
+#room-input:focus {
+    outline: none;
+    margin-left: 45px;
+}
+
+#room-input:focus + #room-foot {
+    transition: .2s;
+    margin-left: 20px;
+    margin-top: -.5px;
+    margin-bottom: -.5px;
+    border-top: solid 3px rgb(200, 200, 200);
+}
+
+#room-input:hover {
+    margin-left: 45px;
+}
+
+#room-input:hover + #room-foot {
+    margin-left: 20px;
+}
+
+#play-button {
+    outline: none;
+    font-family: inherit;
+    color: rgb(200, 200, 200);
+    font-size: 28px;
+    text-align: center;
+    vertical-align: middle;
+    letter-spacing: 6px;
+    margin-top: 80px;
+    width: 240px;
+    height: 50px;
+    border: solid 2px rgb(200, 200, 200);
+    background: none;
+    transition: .1s ease-in-out;
+    animation: .8s ease-out button-appear;
+    animation-fill-mode: both;
+    animation-delay: 1.4s;
+
+}
+
+#play-button:hover {
+    outline: none;
+    cursor: pointer;
+    background: rgba(200, 200, 200, .4);
+}
+
+#play-button:focus {
+    outline: none;
+    cursor: pointer;
+    background: rgba(200, 200, 200, .4);
+}
+
+#play-button:active {
+    transition: .05s;
+    border: solid 2px rgb(200, 200, 200);
+    color: rgb(200, 200, 200);
+    font-size: 26px;
+    letter-spacing: 5px;
+    outline: none;
+    background: rgba(200, 200, 200, .4);
+}
+
+#quality {
+    z-index: 2;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    animation: .8s ease-out button-appear;
+    animation-fill-mode: both;
+    animation-delay: 2s;
+}
+
+#quality-checkbox {
+    background: none;
+    outline: none;
+    border: solid 2px rgb(200, 200, 200);
+    cursor: pointer;
+    height: 20px;
+    position: relative;
+    top: 7px;
+    margin-right: 0;
+    margin-left: 10px;
+    width: 28px;
+    -webkit-appearance: none;
+    transition: .1s;
+}
+
+#quality-checkbox:after {
+    outline: none;
+    background: rgb(200, 200, 200);
+    content: '';
+    display: block;
+    height: 12px;
+    left: 2px;
+    position: relative;
+    top: 2px;
+    width: 12px;
+}
+
+#quality-checkbox:checked {
+    outline: none;
+    background: rgba(200, 200, 200, .4);
+    padding-left: 8px;
+}
+
+#quality-text {
+    display: inline;
+    letter-spacing: 6px;
+    color: rgb(200, 200, 200);
+    letter-spacing: 4px;
+    animation: .4s ease-in-out button-appear;
+    animation-fill-mode: both;
+    animation-delay: 2s;
+}
