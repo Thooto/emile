@@ -22,7 +22,7 @@ var app = express();
 
 
 // Starting server and socket.io module
-var server = app.listen(4000, console.log('Currently listening to port 4000');
+var server = app.listen(4000, console.log('Currently listening to port 4000'));
 var io = socket(server);
 
 
