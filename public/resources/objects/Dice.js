@@ -24,19 +24,24 @@ class Dice extends THREE.Group {
         cookie = Cookies.get('positions');
         if (cookie) content = JSON.parse(cookie);
 
-        if (content.positions) {
-            if (content.positions[index]) {
-                this.position.copy(content.positions[index].p);
-                this.quaternion.copy(content.positions[index].q);
+        if (content) {
+            if (content.positions) {
+                if (content.positions[index]) {
+                    this.position.copy(content.positions[index].p);
+                    this.quaternion.copy(content.positions[index].q);
+                }
+            } else {
+                this.position.set(0,-1,0);
             }
-        } else {
-            this.position.set(0,-1,0);
         }
         this.positionInReserve = undefined;
 
         cookie = Cookies.get('values');
         if (cookie) content = JSON.parse(cookie);
-        this.value = content.faces ? content.faces[index] : undefined;
+        if (content) {
+            this.value = content.faces ? content.faces[index] : undefined;
+
+        }
         this.reserve = false;
 
         var cubeGeo = this.setGeo(.1, .005);
